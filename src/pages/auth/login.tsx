@@ -1,20 +1,17 @@
-import Link from "next/link";
+/**
+ * @style 
+ * import dari Login
+ */
+import LoginView from "@/views/auth/login";
 import { useRouter } from "next/router";
 
+
 const LoginPage = () => {
-  const { push } = useRouter();
-  const handleLogin = () => {
-    push("/product");
-  };
-  return (
-    <div>
-      <h1>Login Page</h1>
-      <button onClick={()=>handleLogin()}>Login</button>
-      <p>
-        Belum punya akun ? register <Link href="/auth/register">disini.</Link>
-      </p>
-    </div>
-  );
+ return (
+ <>
+      <LoginView/>
+ </>
+ );
 };
 
 export default LoginPage;
